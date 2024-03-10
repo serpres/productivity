@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./api:/app
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - db
+
+  web:
+    build:
+      context: ./web
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./web:/app
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - api
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: productivity
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - '5050:5050'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web

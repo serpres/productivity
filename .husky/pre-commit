@@ -1,0 +1,2 @@
+npm run --prefix ./api lint
+npm run --prefix ./web lint

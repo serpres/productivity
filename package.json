@@ -1,0 +1,43 @@
+{
+  "name": "productivity",
+  "version": "0.1.0",
+  "description": "A productivity and goal-setting application",
+  "author": "Sergey Presnyakov (serpres) <serpres77@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "current-git-branch": "1.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "cz-customizable": "7.0.0",
+    "eslint": "7.32.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged",
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      }
+    },
+    "cz-customizable": {
+      "config": "./commitizen.js"
+    }
+  },
+  "lint-staged": {
+    "*.tsx?": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "commitizen": "^4.3.0"
+  }
+}
