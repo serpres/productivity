@@ -40,7 +40,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   };
 
   const scssLoader = {
-    test: /\.s[ac]ss$/i,
+    test: /\.(sa|sc|c)ss$/,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       cssLoaderWithModules,
