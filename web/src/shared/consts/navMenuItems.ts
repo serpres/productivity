@@ -17,36 +17,36 @@ export const NAV_MENU_ITEMS: MenuItem[] = [
     childItems: [
       {
         id: '1.1',
-        title: 'Помодоро',
+        title: 'pomodoro',
         path: `${TIMER_PATH}/${POMODORO_PATH}`,
       },
     ],
   },
   {
     id: '2',
-    title: 'Привычки',
+    title: 'habits',
     path: HABITS_PATH,
     childItems: [
       {
         id: '2.1',
-        title: 'Статистика',
+        title: 'statistics',
         path: `${HABITS_PATH}/${STATISTICS_PATH}`,
       },
       {
         id: '2.2',
-        title: 'Управление',
+        title: 'manage',
         path: `${HABITS_PATH}/${MANAGE_PATH}`,
       },
     ],
   },
   {
     id: '3',
-    title: 'Цели и задачи',
+    title: 'tasks',
     path: TASKS_PATH,
     childItems: [
       {
         id: '3.1',
-        title: 'История',
+        title: 'history',
         path: `${TASKS_PATH}/${HISTORY_PATH}`,
       },
     ],

@@ -1,3 +1,10 @@
 {
-  "timer": "Timer"
+  "timer": "Timer",
+  "pomodoro": "Pomodoro",
+  "habits": "Habits",
+  "statistics": "Statistics",
+  "manage": "Manage",
+  "tasks": "Tasks",
+  "history": "History"
 }
+
