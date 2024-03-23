@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  padding: var(--16-size) var(--20-size);
+  border-radius: var(--8-size);
+  height: var(--32-size);
+  justify-content: center;
+  align-items: center;
+  color: var(--text-accent-color);
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  width: auto;
+  text-decoration: none #6B7280 solid;
+  transition-duration: .2s;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration-thickness: auto;
+  touch-action: manipulation;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  &__primary {
+    background-color: var(--accent-color);
+    &:hover {
+    }
+  }
+  &__secondary {
+    background-color: var(--secondary-accent-color);
+    &:hover {
+      background-color: rgba(var(--secondary-accent-color), 0.6);
+    }
+  }
+}
+
+

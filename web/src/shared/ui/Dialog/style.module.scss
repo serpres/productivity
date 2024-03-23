@@ -1,0 +1,51 @@
+.dialogOverlay {
+  background-color: var(--overlay-bg-color);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+  background-color: white;
+  border-radius: var(--8-size);
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  &:focus {
+    outline: none;
+  }
+}
+
+.dialogTitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.dialogDescription {
+  margin: var(--12-size) 0 var(--20-size);
+  line-height: 1.5;
+}
+
+.closeButton {
+  all: unset;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: var(--16-size);
+  right: var(--16-size);
+}

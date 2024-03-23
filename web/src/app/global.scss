@@ -16,7 +16,9 @@ body {
   --24-size: 24px;
   --32-size: 32px;
   --accent-color: #2B9A66;
-  --secondary-accent-color: #334f3f;
+  --secondary-accent-color: #1a603f;
+  --text-accent-color: #e5e5e5;
+  --overlay-bg-color: rgba(0, 0, 0, 0.75)
 }
 
 html[data-theme="dark"] {
