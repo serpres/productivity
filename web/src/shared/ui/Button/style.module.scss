@@ -1,6 +1,8 @@
 .button {
   display: flex;
   padding: var(--16-size) var(--20-size);
+  // margin-left: auto;
+  // margin-right: auto;
   border-radius: var(--8-size);
   height: var(--32-size);
   justify-content: center;
