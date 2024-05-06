@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { MenuItem } from '@/shared/ui/NavMenu/types';
 
-// import { ComponentProps } from 'react';
 import { NavMenu, NavMenuProps } from './NavMenu';
 
 export default {

@@ -19,12 +19,7 @@ export function AddTaskForm() {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          label={''}
-          {...register('taskName')}
-          name="taskName"
-          // value={formData.taskName || ''}
-        />
+        <Input label={''} {...register('taskName')} name="taskName" />
         <Button type="submit">Сохранить</Button>
       </form>
     </>

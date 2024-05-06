@@ -27,7 +27,7 @@ export const useDetectActiveItem = (menuItems: MenuItem[]) => {
     }
     const currentItem = findItemByPath(menuItems);
     if (currentItem) setActiveId(currentItem.id);
-  }, [activeId, menuItems, pathname]);
+  }, [location]);
 
   const onSelectMenuItem = useCallback(
     (id: string, path: string) => {
