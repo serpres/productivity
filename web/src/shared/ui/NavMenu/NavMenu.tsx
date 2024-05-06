@@ -6,7 +6,7 @@ import { useDetectActiveItem } from '@/shared/ui/NavMenu/useDetectActiveItem';
 
 import style from './style.module.scss';
 
-interface NavMenuProps {
+export interface NavMenuProps {
   menuItems: MenuItem[];
 }
 
